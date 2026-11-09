@@ -1,0 +1,1103 @@
+{
+  "property_map": {
+    "info": {
+      "notes": {
+        "value": ""
+      },
+      "author": {
+        "value": ""
+      },
+      "purpose": {
+        "value": null
+      },
+      "pipeline_doc_uri": {
+        "value": null
+      },
+      "label": {
+        "value": "CPQ_19_Apply_Snapshot"
+      }
+    },
+    "error": {
+      "error_behavior": {
+        "value": "none"
+      }
+    },
+    "settings": {
+      "param_table": {
+        "value": [
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "runId"
+            },
+            "value": {
+              "value": ""
+            },
+            "data_type": {
+              "value": "string"
+            }
+          },
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "objectName"
+            },
+            "value": {
+              "value": ""
+            },
+            "data_type": {
+              "value": "string"
+            }
+          },
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "keyColumns"
+            },
+            "value": {
+              "value": ""
+            },
+            "data_type": {
+              "value": "string"
+            }
+          },
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "expectedTotal"
+            },
+            "value": {
+              "value": "-1"
+            },
+            "data_type": {
+              "value": "string"
+            }
+          },
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "deleteGuardPct"
+            },
+            "value": {
+              "value": ""
+            },
+            "data_type": {
+              "value": "string"
+            }
+          },
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "deleteGuardMax"
+            },
+            "value": {
+              "value": ""
+            },
+            "data_type": {
+              "value": "string"
+            }
+          },
+          {
+            "capture": {
+              "value": true
+            },
+            "key": {
+              "value": "forceDeletes"
+            },
+            "value": {
+              "value": "false"
+            },
+            "data_type": {
+              "value": "string"
+            }
+          }
+        ]
+      },
+      "imports": {
+        "value": [
+          {
+            "path": {
+              "value": "cpq_config.expr"
+            },
+            "as": {
+              "value": "cfg"
+            }
+          }
+        ]
+      }
+    },
+    "input": {},
+    "output": {
+      "950ee608-2581-4145-883a-4a6c790787ab_output0": {
+        "label": {
+          "value": "Return run summary - output0"
+        },
+        "view_type": {
+          "value": "document"
+        }
+      }
+    }
+  },
+  "snap_map": {
+    "c6a1cb59-fd9f-4f36-9f8d-f8429e2cc20e": {
+      "class_fqid": "com-snaplogic-snaps-transform-jsongenerator_2-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+      "class_version": 2,
+      "instance_fqid": "c6a1cb59-fd9f-4f36-9f8d-f8429e2cc20e_1",
+      "instance_id": "c6a1cb59-fd9f-4f36-9f8d-f8429e2cc20e",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {}
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {},
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Start"
+          }
+        },
+        "settings": {
+          "editable_content": {
+            "value": "[{\"start\": true}]"
+          },
+          "arrayElementsAsDocuments": {
+            "value": true
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "c586688b-08a5-402d-940c-60b32717b531": {
+      "class_fqid": "com-snaplogic-snaps-databricks-execute_1-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-databricks-execute",
+      "class_version": 1,
+      "instance_fqid": "c586688b-08a5-402d-940c-60b32717b531_1",
+      "instance_id": "c586688b-08a5-402d-940c-60b32717b531",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {
+              "label": {
+                "value": "Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "label": "../../shared/Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "expression": false
+              },
+              "ref_class_id": {
+                "value": "com-snaplogic-snap-api-sql-accounts-databricks-databricksdatabaseaccount"
+              },
+              "ref_id": {
+                "value": "0a223ce0-a017-4f3d-b0d9-14e768c30c30",
+                "expression": false
+              }
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Compute business_key and row_hash"
+          }
+        },
+        "settings": {
+          "sqlStatement": {
+            "value": "\"UPDATE \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot SET business_key = \" + (lib.cfg.keyExpr(_keyColumns)) + \", row_hash = sha2(payload, 256) WHERE run_id = \" + (lib.cfg.sqlStr(_runId))",
+            "expression": true
+          },
+          "queryType": {
+            "value": "Write",
+            "expression": false
+          },
+          "executable_during_suggest": {
+            "value": false
+          },
+          "passThrough": {
+            "value": true
+          },
+          "maxRetryProp": {
+            "value": 0,
+            "expression": false
+          },
+          "retryIntervalProp": {
+            "value": 1,
+            "expression": false
+          },
+          "sqlQueryManagement": {
+            "value": "Continue to execute queued queries when pipeline is stopped or if it fails"
+          },
+          "sessionParamsProp": {
+            "value": []
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "1f08f096-bce9-40cd-8234-05c40d6ab936": {
+      "class_fqid": "com-snaplogic-snaps-databricks-execute_1-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-databricks-execute",
+      "class_version": 1,
+      "instance_fqid": "1f08f096-bce9-40cd-8234-05c40d6ab936_1",
+      "instance_id": "1f08f096-bce9-40cd-8234-05c40d6ab936",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {
+              "label": {
+                "value": "Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "label": "../../shared/Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "expression": false
+              },
+              "ref_class_id": {
+                "value": "com-snaplogic-snap-api-sql-accounts-databricks-databricksdatabaseaccount"
+              },
+              "ref_id": {
+                "value": "0a223ce0-a017-4f3d-b0d9-14e768c30c30",
+                "expression": false
+              }
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Completeness and delete-guard counts"
+          }
+        },
+        "settings": {
+          "sqlStatement": {
+            "value": "\"SELECT (SELECT count(*) FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \") AS staged_rows, (SELECT count(DISTINCT business_key) FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \") AS distinct_keys, (SELECT count(*) FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_silver.snapshot_rows WHERE object_name = \" + (lib.cfg.sqlStr(_objectName)) + \" AND NOT is_deleted) AS active_rows, (SELECT count(*) FROM (SELECT business_key FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_silver.snapshot_rows WHERE object_name = \" + (lib.cfg.sqlStr(_objectName)) + \" AND NOT is_deleted) t LEFT ANTI JOIN (SELECT business_key FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \") s ON t.business_key = s.business_key) AS would_delete\"",
+            "expression": true
+          },
+          "queryType": {
+            "value": "Read",
+            "expression": false
+          },
+          "executable_during_suggest": {
+            "value": false
+          },
+          "passThrough": {
+            "value": true
+          },
+          "maxRetryProp": {
+            "value": 0,
+            "expression": false
+          },
+          "retryIntervalProp": {
+            "value": 1,
+            "expression": false
+          },
+          "sqlQueryManagement": {
+            "value": "Continue to execute queued queries when pipeline is stopped or if it fails"
+          },
+          "sessionParamsProp": {
+            "value": []
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "cbeba00d-2171-43e2-bea0-3b5a495f4914": {
+      "class_fqid": "com-snaplogic-snaps-transform-datatransform_4-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-transform-datatransform",
+      "class_version": 4,
+      "instance_fqid": "cbeba00d-2171-43e2-bea0-3b5a495f4914_1",
+      "instance_id": "cbeba00d-2171-43e2-bea0-3b5a495f4914",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {}
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Evaluate completeness and guard"
+          }
+        },
+        "settings": {
+          "passThrough": {
+            "value": true
+          },
+          "nullSafeAccess": {
+            "value": false
+          },
+          "transformations": {
+            "value": {
+              "mappingRoot": {
+                "value": "$"
+              },
+              "mappingTable": {
+                "value": [
+                  {
+                    "expression": {
+                      "value": "parseInt(_expectedTotal)",
+                      "expression": true
+                    },
+                    "targetPath": {
+                      "value": "$expected"
+                    }
+                  },
+                  {
+                    "expression": {
+                      "value": "parseInt(_expectedTotal) >= 0 && $staged_rows == parseInt(_expectedTotal)",
+                      "expression": true
+                    },
+                    "targetPath": {
+                      "value": "$complete"
+                    }
+                  },
+                  {
+                    "expression": {
+                      "value": "$would_delete <= (_deleteGuardMax == '' ? lib.cfg.deleteGuardMax : parseInt(_deleteGuardMax)) && ($active_rows == 0 || $would_delete * 100 <= (_deleteGuardPct == '' ? lib.cfg.deleteGuardPct : parseFloat(_deleteGuardPct)) * $active_rows)",
+                      "expression": true
+                    },
+                    "targetPath": {
+                      "value": "$within_guard"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "omitExpressionIfMissing": {
+            "value": false
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "856bebad-3354-4137-8c52-30ce805a63cf": {
+      "class_fqid": "com-snaplogic-snaps-transform-datatransform_4-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-transform-datatransform",
+      "class_version": 4,
+      "instance_fqid": "856bebad-3354-4137-8c52-30ce805a63cf_1",
+      "instance_id": "856bebad-3354-4137-8c52-30ce805a63cf",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {}
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Decide deletes and status"
+          }
+        },
+        "settings": {
+          "passThrough": {
+            "value": true
+          },
+          "nullSafeAccess": {
+            "value": false
+          },
+          "transformations": {
+            "value": {
+              "mappingRoot": {
+                "value": "$"
+              },
+              "mappingTable": {
+                "value": [
+                  {
+                    "expression": {
+                      "value": "$complete && ($within_guard || _forceDeletes == 'true')",
+                      "expression": true
+                    },
+                    "targetPath": {
+                      "value": "$allow"
+                    }
+                  },
+                  {
+                    "expression": {
+                      "value": "!$complete ? 'OK_DELETES_DEFERRED_INCOMPLETE' : (($within_guard || _forceDeletes == 'true') ? 'OK' : 'OK_DELETES_BLOCKED_GUARD')",
+                      "expression": true
+                    },
+                    "targetPath": {
+                      "value": "$status"
+                    }
+                  },
+                  {
+                    "expression": {
+                      "value": "'expected=' + $expected + ' staged=' + $staged_rows + ' distinct_keys=' + $distinct_keys + ' active=' + $active_rows + ' would_delete=' + $would_delete + ($distinct_keys != $staged_rows ? ' WARNING duplicate business keys - check keyColumns' : '')",
+                      "expression": true
+                    },
+                    "targetPath": {
+                      "value": "$message"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "omitExpressionIfMissing": {
+            "value": false
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "563f5916-c307-4270-b99e-f507174a3f14": {
+      "class_fqid": "com-snaplogic-snaps-databricks-multiexecute_1-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-databricks-multiexecute",
+      "class_version": 1,
+      "instance_fqid": "563f5916-c307-4270-b99e-f507174a3f14_1",
+      "instance_id": "563f5916-c307-4270-b99e-f507174a3f14",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {
+              "label": {
+                "value": "Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "label": "../../shared/Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "expression": false
+              },
+              "ref_class_id": {
+                "value": "com-snaplogic-snap-api-sql-accounts-databricks-databricksdatabaseaccount"
+              },
+              "ref_id": {
+                "value": "0a223ce0-a017-4f3d-b0d9-14e768c30c30",
+                "expression": false
+              }
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Log changes, merge silver, audit, control, clean staging"
+          }
+        },
+        "settings": {
+          "executable_during_suggest": {
+            "value": false
+          },
+          "sqlStatements": {
+            "value": [
+              {
+                "sqlStatement": {
+                  "value": "\"INSERT INTO \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_raw.snapshot_changes (run_id, object_name, business_key, cpq_id, op, row_hash, payload, changed_at) SELECT s.run_id, s.object_name, s.business_key, s.cpq_id, CASE WHEN t.business_key IS NULL OR t.is_deleted THEN 'I' ELSE 'U' END, s.row_hash, s.payload, current_timestamp() FROM (SELECT * FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \" QUALIFY row_number() OVER (PARTITION BY business_key ORDER BY cpq_id DESC) = 1) s LEFT JOIN (SELECT * FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_silver.snapshot_rows WHERE object_name = \" + (lib.cfg.sqlStr(_objectName)) + \") t ON t.business_key = s.business_key WHERE t.business_key IS NULL OR t.is_deleted OR t.row_hash <> s.row_hash\"",
+                  "expression": true
+                }
+              },
+              {
+                "sqlStatement": {
+                  "value": "\"INSERT INTO \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_raw.snapshot_changes (run_id, object_name, business_key, cpq_id, op, row_hash, payload, changed_at) SELECT \" + (lib.cfg.sqlStr(_runId)) + \", \" + (lib.cfg.sqlStr(_objectName)) + \", t.business_key, t.cpq_id, 'D', t.row_hash, t.payload, current_timestamp() FROM (SELECT * FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_silver.snapshot_rows WHERE object_name = \" + (lib.cfg.sqlStr(_objectName)) + \" AND NOT is_deleted) t LEFT ANTI JOIN (SELECT business_key FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \") s ON t.business_key = s.business_key WHERE \" + ($allow ? 'true' : 'false')",
+                  "expression": true
+                }
+              },
+              {
+                "sqlStatement": {
+                  "value": "\"MERGE INTO \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_silver.snapshot_rows t USING (SELECT * FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_raw.snapshot_changes WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \" AND object_name = \" + (lib.cfg.sqlStr(_objectName)) + \") c ON t.object_name = c.object_name AND t.business_key = c.business_key WHEN MATCHED AND c.op = 'D' THEN UPDATE SET t.is_deleted = true, t.deleted_at = c.changed_at, t.last_changed_at = c.changed_at, t.last_run_id = c.run_id WHEN MATCHED THEN UPDATE SET t.cpq_id = c.cpq_id, t.row_hash = c.row_hash, t.payload = c.payload, t.is_deleted = false, t.deleted_at = NULL, t.last_changed_at = c.changed_at, t.last_run_id = c.run_id WHEN NOT MATCHED AND c.op <> 'D' THEN INSERT (object_name, business_key, cpq_id, row_hash, payload, is_deleted, deleted_at, first_seen_at, last_changed_at, last_run_id) VALUES (c.object_name, c.business_key, c.cpq_id, c.row_hash, c.payload, false, NULL, c.changed_at, c.changed_at, c.run_id)\"",
+                  "expression": true
+                }
+              },
+              {
+                "sqlStatement": {
+                  "value": "\"INSERT INTO \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.sync_audit (run_id, object_name, finished_at, status, expected_total, staged_rows, distinct_keys, inserted_rows, updated_rows, deleted_rows, would_delete, deletes_allowed, message) SELECT \" + (lib.cfg.sqlStr(_runId)) + \", \" + (lib.cfg.sqlStr(_objectName)) + \", current_timestamp(), \" + (lib.cfg.sqlStr($status)) + \", \" + ('' + $expected) + \", \" + ('' + $staged_rows) + \", \" + ('' + $distinct_keys) + \", count_if(op = 'I'), count_if(op = 'U'), count_if(op = 'D'), \" + ('' + $would_delete) + \", \" + ($allow ? 'true' : 'false') + \", \" + (lib.cfg.sqlStr($message)) + \" FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_raw.snapshot_changes WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \" AND object_name = \" + (lib.cfg.sqlStr(_objectName))",
+                  "expression": true
+                }
+              },
+              {
+                "sqlStatement": {
+                  "value": "\"MERGE INTO \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.sync_control t USING (SELECT \" + (lib.cfg.sqlStr(_objectName)) + \" AS object_name) s ON t.object_name = s.object_name WHEN MATCHED THEN UPDATE SET t.last_run_id = \" + (lib.cfg.sqlStr(_runId)) + \", t.last_run_at = current_timestamp(), t.last_status = \" + (lib.cfg.sqlStr($status)) + \", t.last_message = \" + (lib.cfg.sqlStr($message)) + \" WHEN NOT MATCHED THEN INSERT (object_name, last_run_id, last_run_at, last_status, last_message, watermark) VALUES (\" + (lib.cfg.sqlStr(_objectName)) + \", \" + (lib.cfg.sqlStr(_runId)) + \", current_timestamp(), \" + (lib.cfg.sqlStr($status)) + \", \" + (lib.cfg.sqlStr($message)) + \", NULL)\"",
+                  "expression": true
+                }
+              },
+              {
+                "sqlStatement": {
+                  "value": "\"DELETE FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.stg_snapshot WHERE object_name = \" + (lib.cfg.sqlStr(_objectName))",
+                  "expression": true
+                }
+              }
+            ]
+          },
+          "maxRetryProp": {
+            "value": 0,
+            "expression": false
+          },
+          "retryIntervalProp": {
+            "value": 1,
+            "expression": false
+          },
+          "sqlQueryManagement": {
+            "value": "Continue to execute queued queries when pipeline is stopped or if it fails"
+          },
+          "sessionParamsProp": {
+            "value": []
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "68de4322-f802-4722-9646-7177b5b14313": {
+      "class_fqid": "com-snaplogic-snaps-transform-groupbyn_1-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-transform-groupbyn",
+      "class_version": 1,
+      "instance_fqid": "68de4322-f802-4722-9646-7177b5b14313_1",
+      "instance_id": "68de4322-f802-4722-9646-7177b5b14313",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {}
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Wait for all statements"
+          }
+        },
+        "settings": {
+          "groupSize": {
+            "value": 1000000,
+            "expression": false
+          },
+          "targetField": {
+            "value": "results"
+          },
+          "memorySensitivity": {
+            "value": "None"
+          },
+          "minGroupSize": {
+            "value": 1,
+            "expression": false
+          },
+          "flushTimeoutSecs": {
+            "value": 0,
+            "expression": false
+          },
+          "minimumMemory": {
+            "value": 500,
+            "expression": false
+          },
+          "outOfResourceTimeout": {
+            "value": 30,
+            "expression": false
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    },
+    "950ee608-2581-4145-883a-4a6c790787ab": {
+      "class_fqid": "com-snaplogic-snaps-databricks-execute_1-UNKNOWN",
+      "class_id": "com-snaplogic-snaps-databricks-execute",
+      "class_version": 1,
+      "instance_fqid": "950ee608-2581-4145-883a-4a6c790787ab_1",
+      "instance_id": "950ee608-2581-4145-883a-4a6c790787ab",
+      "instance_version": 1,
+      "property_map": {
+        "account": {
+          "account_ref": {
+            "value": {
+              "label": {
+                "value": "Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "label": "../../shared/Databricks_EMEA-SE_sql-warehouse-SERVERLESS",
+                "expression": false
+              },
+              "ref_class_id": {
+                "value": "com-snaplogic-snap-api-sql-accounts-databricks-databricksdatabaseaccount"
+              },
+              "ref_id": {
+                "value": "0a223ce0-a017-4f3d-b0d9-14e768c30c30",
+                "expression": false
+              }
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "output": {
+          "output0": {
+            "label": {
+              "value": "output0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "input": {
+          "input0": {
+            "label": {
+              "value": "input0"
+            },
+            "view_type": {
+              "value": "document"
+            }
+          }
+        },
+        "info": {
+          "notes": {
+            "value": null
+          },
+          "label": {
+            "value": "Return run summary"
+          }
+        },
+        "settings": {
+          "sqlStatement": {
+            "value": "\"SELECT * FROM \" + (lib.cfg.prefix(lib.cfg.catalog)) + \"cpq_ops.sync_audit WHERE run_id = \" + (lib.cfg.sqlStr(_runId)) + \" AND object_name = \" + (lib.cfg.sqlStr(_objectName))",
+            "expression": true
+          },
+          "queryType": {
+            "value": "Read",
+            "expression": false
+          },
+          "executable_during_suggest": {
+            "value": false
+          },
+          "passThrough": {
+            "value": true
+          },
+          "maxRetryProp": {
+            "value": 0,
+            "expression": false
+          },
+          "retryIntervalProp": {
+            "value": 1,
+            "expression": false
+          },
+          "sqlQueryManagement": {
+            "value": "Continue to execute queued queries when pipeline is stopped or if it fails"
+          },
+          "sessionParamsProp": {
+            "value": []
+          }
+        }
+      },
+      "class_build_tag": "UNKNOWN"
+    }
+  },
+  "link_map": {
+    "link100": {
+      "src_id": "c6a1cb59-fd9f-4f36-9f8d-f8429e2cc20e",
+      "dst_id": "c586688b-08a5-402d-940c-60b32717b531",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    },
+    "link101": {
+      "src_id": "c586688b-08a5-402d-940c-60b32717b531",
+      "dst_id": "1f08f096-bce9-40cd-8234-05c40d6ab936",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    },
+    "link102": {
+      "src_id": "1f08f096-bce9-40cd-8234-05c40d6ab936",
+      "dst_id": "cbeba00d-2171-43e2-bea0-3b5a495f4914",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    },
+    "link103": {
+      "src_id": "cbeba00d-2171-43e2-bea0-3b5a495f4914",
+      "dst_id": "856bebad-3354-4137-8c52-30ce805a63cf",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    },
+    "link104": {
+      "src_id": "856bebad-3354-4137-8c52-30ce805a63cf",
+      "dst_id": "563f5916-c307-4270-b99e-f507174a3f14",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    },
+    "link105": {
+      "src_id": "563f5916-c307-4270-b99e-f507174a3f14",
+      "dst_id": "68de4322-f802-4722-9646-7177b5b14313",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    },
+    "link106": {
+      "src_id": "68de4322-f802-4722-9646-7177b5b14313",
+      "dst_id": "950ee608-2581-4145-883a-4a6c790787ab",
+      "src_view_id": "output0",
+      "dst_view_id": "input0",
+      "isGoto": false
+    }
+  },
+  "render_map": {
+    "pan_x_num": 0,
+    "pan_y_num": 0,
+    "scale_ratio": 1,
+    "detail_map": {
+      "c6a1cb59-fd9f-4f36-9f8d-f8429e2cc20e": {
+        "grid_x_int": 2,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "c586688b-08a5-402d-940c-60b32717b531": {
+        "grid_x_int": 3,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "1f08f096-bce9-40cd-8234-05c40d6ab936": {
+        "grid_x_int": 4,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "cbeba00d-2171-43e2-bea0-3b5a495f4914": {
+        "grid_x_int": 5,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "856bebad-3354-4137-8c52-30ce805a63cf": {
+        "grid_x_int": 6,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "563f5916-c307-4270-b99e-f507174a3f14": {
+        "grid_x_int": 7,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "68de4322-f802-4722-9646-7177b5b14313": {
+        "grid_x_int": 8,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      },
+      "950ee608-2581-4145-883a-4a6c790787ab": {
+        "grid_x_int": 9,
+        "input": {},
+        "output": {},
+        "index": null,
+        "recommendation_id": null,
+        "source": "snap catagory",
+        "grid_y_int": 2,
+        "errors": {},
+        "error": {},
+        "rot_int": 0,
+        "rot_tail_int": 0
+      }
+    }
+  },
+  "class_fqid": "com-snaplogic-pipeline_9",
+  "class_id": "com-snaplogic-pipeline",
+  "class_version": 9,
+  "instance_version": 2
+}

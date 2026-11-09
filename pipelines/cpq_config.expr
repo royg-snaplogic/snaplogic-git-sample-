@@ -1,0 +1,13 @@
+{
+  cpqBaseUrl: "https://YOUR-SITE.bigmachines.com",
+  restVersion: "v19",
+  pageSize: 1000,
+  catalog: "",
+  deleteGuardPct: 5,
+  deleteGuardMax: 500,
+  prefix: c => c == "" ? "" : "`" + c + "`.",
+  sqlStr: s => "'" + ("" + s).split("'").join("''") + "'",
+  keyExpr: cols => cols.trim() == "" ? "cpq_id" : "concat_ws('|', " + cols.split(",").map(k => "coalesce(payload:['" + k.trim() + "'], '')").join(", ") + ")",
+  restUrl: (base, ver, resource) => base + "/rest/" + ver + "/" + resource,
+  pageQuery: (size, offset) => "?limit=" + size + "&offset=" + offset + "&orderby=id:asc"
+}
